@@ -19,6 +19,13 @@
 		81C8FFB723453F70001950EE /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8FFB623453F70001950EE /* NetworkHelper.swift */; };
 		81C8FFBB23453FC7001950EE /* FilmAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8FFBA23453FC7001950EE /* FilmAPIClient.swift */; };
 		81C8FFBD2345400C001950EE /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8FFBC2345400C001950EE /* PersistenceHelper.swift */; };
+		EA69D0CF234639CF00D6E745 /* FilmPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0CE234639CF00D6E745 /* FilmPersistenceHelper.swift */; };
+		EA69D0D32346417400D6E745 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0D22346417400D6E745 /* ProfileVC.swift */; };
+		EA69D0D5234643AC00D6E745 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0D4234643AC00D6E745 /* FavoriteCell.swift */; };
+		EA69D0D72346459300D6E745 /* ProfileImagePersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0D62346459300D6E745 /* ProfileImagePersistenceHelper.swift */; };
+		EA69D0D92346468300D6E745 /* ProfileImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0D82346468300D6E745 /* ProfileImageInfo.swift */; };
+		EA69D0DB2346709900D6E745 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0DA2346709900D6E745 /* LoginVC.swift */; };
+		EA69D0DD2346717400D6E745 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69D0DC2346717400D6E745 /* UserDefaultsWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		81C8FFB623453F70001950EE /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		81C8FFBA23453FC7001950EE /* FilmAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAPIClient.swift; sourceTree = "<group>"; };
 		81C8FFBC2345400C001950EE /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		EA69D0CE234639CF00D6E745 /* FilmPersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPersistenceHelper.swift; sourceTree = "<group>"; };
+		EA69D0D22346417400D6E745 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		EA69D0D4234643AC00D6E745 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		EA69D0D62346459300D6E745 /* ProfileImagePersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePersistenceHelper.swift; sourceTree = "<group>"; };
+		EA69D0D82346468300D6E745 /* ProfileImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageInfo.swift; sourceTree = "<group>"; };
+		EA69D0DA2346709900D6E745 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EA69D0DC2346717400D6E745 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +82,12 @@
 		813FF75A2343A11700B6DCDA /* GhibliPractice */ = {
 			isa = PBXGroup;
 			children = (
-				81C8FFB923453FB6001950EE /* Helpers */,
 				81C8FFB223453E81001950EE /* Network */,
+				81C8FFB923453FB6001950EE /* Persistence */,
+				81C8FFAF23453E5C001950EE /* Models */,
 				81C8FFB123453E77001950EE /* Controllers */,
 				81C8FFB023453E62001950EE /* Views */,
-				81C8FFAF23453E5C001950EE /* Models */,
 				81C8FFB823453F9C001950EE /* Supporting */,
-				813FF7612343A11700B6DCDA /* Main.storyboard */,
-				813FF7642343A11800B6DCDA /* Assets.xcassets */,
-				813FF7662343A11800B6DCDA /* LaunchScreen.storyboard */,
 				813FF7692343A11800B6DCDA /* Info.plist */,
 			);
 			path = GhibliPractice;
@@ -86,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				81C8FFAD23453E56001950EE /* Film.swift */,
+				EA69D0D82346468300D6E745 /* ProfileImageInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,7 +105,9 @@
 		81C8FFB023453E62001950EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				813FF7612343A11700B6DCDA /* Main.storyboard */,
 				81C8FFAB23453DA5001950EE /* FilmCell.swift */,
+				EA69D0D4234643AC00D6E745 /* FavoriteCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,7 +115,9 @@
 		81C8FFB123453E77001950EE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA69D0DA2346709900D6E745 /* LoginVC.swift */,
 				81C8FFA923453B10001950EE /* FilmsVC.swift */,
+				EA69D0D22346417400D6E745 /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,8 +125,9 @@
 		81C8FFB223453E81001950EE /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				81C8FFB423453F2F001950EE /* AppError.swift */,
 				81C8FFB623453F70001950EE /* NetworkHelper.swift */,
+				81C8FFBA23453FC7001950EE /* FilmAPIClient.swift */,
+				81C8FFB423453F2F001950EE /* AppError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -118,19 +135,23 @@
 		81C8FFB823453F9C001950EE /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				813FF7642343A11800B6DCDA /* Assets.xcassets */,
 				813FF75B2343A11700B6DCDA /* AppDelegate.swift */,
+				813FF7662343A11800B6DCDA /* LaunchScreen.storyboard */,
 				813FF75D2343A11700B6DCDA /* SceneDelegate.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		81C8FFB923453FB6001950EE /* Helpers */ = {
+		81C8FFB923453FB6001950EE /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				81C8FFBA23453FC7001950EE /* FilmAPIClient.swift */,
 				81C8FFBC2345400C001950EE /* PersistenceHelper.swift */,
+				EA69D0CE234639CF00D6E745 /* FilmPersistenceHelper.swift */,
+				EA69D0D62346459300D6E745 /* ProfileImagePersistenceHelper.swift */,
+				EA69D0DC2346717400D6E745 /* UserDefaultsWrapper.swift */,
 			);
-			path = Helpers;
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,15 +225,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA69D0D72346459300D6E745 /* ProfileImagePersistenceHelper.swift in Sources */,
 				81C8FFB723453F70001950EE /* NetworkHelper.swift in Sources */,
 				81C8FFAE23453E56001950EE /* Film.swift in Sources */,
 				81C8FFAA23453B10001950EE /* FilmsVC.swift in Sources */,
 				81C8FFB523453F2F001950EE /* AppError.swift in Sources */,
 				81C8FFAC23453DA5001950EE /* FilmCell.swift in Sources */,
 				813FF75C2343A11700B6DCDA /* AppDelegate.swift in Sources */,
+				EA69D0D92346468300D6E745 /* ProfileImageInfo.swift in Sources */,
 				813FF75E2343A11700B6DCDA /* SceneDelegate.swift in Sources */,
+				EA69D0CF234639CF00D6E745 /* FilmPersistenceHelper.swift in Sources */,
 				81C8FFBD2345400C001950EE /* PersistenceHelper.swift in Sources */,
+				EA69D0D5234643AC00D6E745 /* FavoriteCell.swift in Sources */,
+				EA69D0DD2346717400D6E745 /* UserDefaultsWrapper.swift in Sources */,
+				EA69D0D32346417400D6E745 /* ProfileVC.swift in Sources */,
 				81C8FFBB23453FC7001950EE /* FilmAPIClient.swift in Sources */,
+				EA69D0DB2346709900D6E745 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

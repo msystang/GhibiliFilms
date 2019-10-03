@@ -58,15 +58,37 @@ class FilmsVC: UITableViewController {
         let film = films[indexPath.row]
         cell.titleLabel.text = film.title
         cell.filmImageView.image = UIImage(named: film.title)
+        
+        cell.optionsButton.tag = indexPath.row
+        cell.delegate = self
+        
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
+
+}
+
+extension FilmsVC: FilmCellDelegate {
+    func actionSheet(tag: Int) {
+        let optionsMenu = UIAlertController(title: "Options", message: "Choose Option", preferredStyle: .actionSheet)
+        
+        let addFilmAction = UIAlertAction(title: "Add to Favorites", style: .default) { (action) in
+            let film = self.films[tag]
+            try? FilmPersistenceHelper.manager.saveFilm(film: film)
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        optionsMenu.addAction(addFilmAction)
+        optionsMenu.addAction(cancelAction)
+        self.present(optionsMenu, animated: true, completion: nil)
+        
+    }
     
-
-
-  
-
+    
 }

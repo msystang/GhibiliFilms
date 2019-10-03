@@ -8,11 +8,23 @@
 
 import UIKit
 
-class FilmCell: UITableViewCell {
+protocol FilmCellDelegate: AnyObject {
+    func actionSheet(tag: Int)
+}
 
+class FilmCell: UITableViewCell {
   
     @IBOutlet weak var filmImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var optionsButton: UIButton!
+    
+    weak var delegate: FilmCellDelegate?
+ 
+    @IBAction func optionsButtonPressed(_ sender: UIButton) {
+        delegate?.actionSheet(tag: sender.tag)
+        
+    }
     
 }
